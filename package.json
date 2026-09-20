@@ -1,0 +1,7 @@
+{
+  "name": "cooljava-demo-assets",
+  "private": true,
+  "scripts": {"build": "node tools/build-assets.mjs"},
+  "dependencies": {"mathjax-full": "3.2.2", "chart.js": "4.4.8"},
+  "devDependencies": {"esbuild": "0.25.0"}
+}

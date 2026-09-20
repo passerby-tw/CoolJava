@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Cool!Java · Espresso Image Processing</title>
+<link rel="stylesheet" href="coffee.css">
+<style>.images{display:flex;gap:20px;flex-wrap:wrap}canvas{max-width:100%;background:white}button:disabled{opacity:.45}code{overflow-wrap:anywhere}</style>
+</head><body><main>
+<nav class="tabs"><a href="polyglot-dom.html">01 Coffee DOM</a><a href="mathematics.html">02 Polyglot Mathematics</a><a class="active" href="image-processing.html">03 Espresso Image</a></nav>
+<div class="eyebrow">Cool!Java · Bytecode scripting</div>
+<h1>Espresso Image Processing</h1>
+<p>WebKit decodes images and Canvas displays them. Espresso runs grayscale and Sobel edge detection using pure Java bytecode, without Applet, AWT, or ImageIO.</p>
+<input id="image-file" type="file" accept="image/*">
+<div class="actions"><button id="gray" disabled>Grayscale</button><button id="sobel" disabled>Sobel edges</button><button id="reset">Reset</button></div>
+<p id="status">Loading Espresso…</p>
+<div class="images"><section><h2>Original</h2><canvas id="image-input" width="320" height="200"></canvas></section><section><h2>Processed</h2><canvas id="image-output" width="320" height="200"></canvas></section></div>
+<p>Images are resized to at most 512 × 512 pixels. Each operation starts from the original image. You can scroll or switch tabs while processing.</p>
+<pre>&lt;script type="application/x-espresso"
+  src="guest/ImageProcessor.class"
+  entry="io.bgplayground.cooljava.guest.ImageProcessor"
+  export="imageProcessor"&gt;&lt;/script&gt;</pre>
+<details><summary>Java · executed bytecode source</summary><pre id="source-java"></pre></details>
+<details><summary>JavaScriptCore · Canvas and event listeners</summary><pre id="source-image"></pre></details>
+</main>
+<script src="scripts/image.js" data-source-output="source-image"></script>
+<script type="application/x-espresso" src="guest/ImageProcessor.class" entry="io.bgplayground.cooljava.guest.ImageProcessor" export="imageProcessor"></script>
+<script type="text/plain" src="scripts/ImageProcessor.java" data-source-output="source-java"></script>
+</body></html>

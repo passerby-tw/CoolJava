@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Cool!Java · Coffee DOM</title><link rel="stylesheet" href="coffee.css"></head>
+<body><main>
+<nav class="tabs"><a class="active" href="polyglot-dom.html">01 Coffee DOM</a><a href="mathematics.html">02 Polyglot Mathematics</a><a href="image-processing.html">03 Espresso Image</a></nav>
+<div class="eyebrow">Cool!Java · One DOM, three languages</div>
+<h1>Move the same coffee</h1>
+<p class="lead">GraalJS, GraalPy, and Java source / Espresso each control the same cup of coffee. Buttons use W3C DOM listeners; CSS provides the animations.</p>
+<div class="stage"><div id="coffee" aria-label="coffee">☕</div></div>
+<div class="actions"><button id="run-js">JavaScript · Wave</button><button id="run-python">Python · Bounce</button><button id="run-java">Java source · Spin</button></div>
+<p id="status">Loading scripts…</p>
+<p>The complete source executed by this page is shown below. Java is compiled when loaded, and its bytecode runs in Espresso.</p>
+<div class="source-grid"><section><h2>JavaScript</h2><pre id="source-js"></pre></section><section><h2>Python</h2><pre id="source-python"></pre></section><section><h2>Java source</h2><pre id="source-java"></pre></section></div>
+<p class="lead">Trusted local code only. This PoC is not a security sandbox for untrusted code.</p>
+</main>
+<script type="application/x-graaljs" src="scripts/coffee.js" data-source-output="source-js"></script>
+<script type="application/x-graalpy" src="scripts/coffee.py" data-source-output="source-python"></script>
+<script type="application/x-java" src="scripts/Coffee.java" data-source-output="source-java"></script>
+<script type="application/x-graaljs">document.getElementById('status').setTextContent('Ready — choose a language');</script>
+</body></html>

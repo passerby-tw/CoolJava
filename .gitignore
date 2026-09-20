@@ -1,0 +1,23 @@
+# Build output and installed build tools
+/target/
+/node_modules/
+/dist/
+
+# Python caches and local virtual environments
+__pycache__/
+*.py[cod]
+/.venv/
+/venv/
+
+# Editor and local configuration
+/.idea/
+/.vscode/
+*.iml
+.DS_Store
+*.log
+.env
+.env.*
+!.env.example
+
+# Locally generated distribution archives
+/CoolJava*.zip

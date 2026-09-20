@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Cool!Java · Polyglot Mathematics</title>
+<link rel="stylesheet" href="coffee.css">
+<style>textarea{width:100%;box-sizing:border-box;background:#111b2d;color:#e4ecfa;padding:16px;font-size:20px} .formula{background:white;border-radius:12px;padding:16px;margin:12px 0;overflow:auto}.formula img{max-width:100%;min-height:35px} .plot{height:340px;background:#f9fafb;padding:16px;border-radius:12px} pre{white-space:pre-wrap;overflow-wrap:anywhere} #status{white-space:pre-wrap}</style>
+</head><body><main>
+<nav class="tabs"><a href="polyglot-dom.html">01 Coffee DOM</a><a class="active" href="mathematics.html">02 Polyglot Mathematics</a><a href="image-processing.html">03 Espresso Image</a></nav>
+<div class="eyebrow">Cool!Java · Languages working together</div><h1>Polyglot Mathematics</h1>
+<p class="lead">Python / SymPy computes; GraalJS / MathJax typesets; JavaScriptCore / Chart.js plots.</p>
+<label for="expression">f(x) · Examples: sin(x) * exp(x), x**3 - 2*x, log(x)</label>
+<textarea id="expression" rows="2">sin(x) * exp(x)</textarea><button id="calculate">Calculate</button>
+<p id="status">Loading SymPy and MathJax…</p>
+<h2>f(x)</h2><div class="formula"><img id="formula" alt="Function"></div>
+<h2>f′(x)</h2><div class="formula"><img id="derivative" alt="First derivative"></div>
+<h2>f″(x)</h2><div class="formula"><img id="second" alt="Second derivative"></div>
+<div class="plot"><canvas id="plot"></canvas></div>
+<p>Samples cover x ∈ [-5, 5]. Undefined, non-real, or excessively large values appear as gaps. Fixed sampling may miss discontinuities.</p>
+<details><summary>Python · SymPy source</summary><pre id="source-python"></pre></details>
+<details><summary>GraalJS · MathJax orchestration</summary><pre id="source-js"></pre></details>
+<details><summary>JavaScriptCore · Chart.js</summary><pre id="source-chart"></pre></details>
+</main>
+<script src="vendor/chart.umd.js"></script>
+<script src="scripts/chart.js" data-source-output="source-chart"></script>
+<script type="application/x-graalpy" src="scripts/mathematics.py" data-source-output="source-python"></script>
+<script type="application/x-graaljs" src="vendor/mathjax-graal.js"></script>
+<script type="application/x-graaljs" src="scripts/mathematics.js" data-source-output="source-js"></script>
+</body></html>
