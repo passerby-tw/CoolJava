@@ -1,6 +1,6 @@
 # Cool!Java
 
-Cool!Java is a demo browser for Polyglot Scripting.
+Cool!Java is a demo browser for [Polyglot Scripting](https://bgplayground.blogspot.com/2026/09/polyglot-scripting.html).
 
 ## What is it?
 
