@@ -1,5 +1,11 @@
 # Cool!Java
 
+<p align="left">
+  <img src="src/main/resources/io/bgplayground/cooljava/images/cooljava-icon.png"
+       alt="Cool!Java"
+       width="240">
+</p>
+
 Cool!Java is a demo browser for [Polyglot Scripting](https://bgplayground.blogspot.com/2026/09/polyglot-scripting.html).
 
 ## What is it?
